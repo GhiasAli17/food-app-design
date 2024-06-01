@@ -1,112 +1,150 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="min-h-screen text-lighDark">
+      <div className="px-[100px] z-10 ">
+        <nav className="mt-12 flex items-center ">
+          <div className="w-[1117px] h-[1117px] rounded-full -z-50 bg-lightPink -top-[105%] absolute ml-[223px] mb-[258px]"></div>
+          <div className="flex gap-[5px] items-center cursor-pointer">
+            <div className="relative">
+              <div className="w-4 h-4 bg-yellow rounded-xl"></div>
+              <svg
+                width="6"
+                height="11"
+                viewBox="0 0 6 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute top-[5px] left-[5px] right-[5px] bottom-0"
+              >
+                <path
+                  d="M6 8C6 6.34315 3 0.5 3 0.5C3 0.5 0 6.34315 0 8C0 9.65685 1.34315 11 3 11C4.65685 11 6 9.65685 6 8Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <h3 className="font-medium text-lg">FoodSpin</h3>
+          </div>
+          {/* middle section  */}
+          <div className="ml-[170px]">
+            <ul className="list-none flex text-sm gap-x-[60px]">
+              <li className="hover:underline transition-all ease-in-out duration-500 ">
+                <Link href="#">Breakfast</Link>
+              </li>
+              <li className="hover:underline transition-all ease-in-out duration-500 ">
+                <Link href="#">Lunch</Link>
+              </li>
+              <li className="hover:underline transition-all ease-in-out duration-500 ">
+                <Link href="#">Dinner</Link>
+              </li>
+            </ul>
+          </div>
+          {/* right section  */}
+          <div className="ml-auto cursor-pointer">
+            <svg
+              width="20"
+              height="22"
+              viewBox="0 0 20 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_5_28)">
+                <path
+                  d="M4 7V5C4 3.67392 4.52678 2.40215 5.46447 1.46447C6.40215 0.526784 7.67392 0 9 0C10.3261 0 11.5979 0.526784 12.5355 1.46447C13.4732 2.40215 14 3.67392 14 5V7H17C17.2652 7 17.5196 7.10536 17.7071 7.29289C17.8946 7.48043 18 7.73478 18 8V20C18 20.2652 17.8946 20.5196 17.7071 20.7071C17.5196 20.8946 17.2652 21 17 21H1C0.734784 21 0.48043 20.8946 0.292893 20.7071C0.105357 20.5196 0 20.2652 0 20V8C0 7.73478 0.105357 7.48043 0.292893 7.29289C0.48043 7.10536 0.734784 7 1 7H4ZM4 9H2V19H16V9H14V11H12V9H6V11H4V9ZM6 7H12V5C12 4.20435 11.6839 3.44129 11.1213 2.87868C10.5587 2.31607 9.79565 2 9 2C8.20435 2 7.44129 2.31607 6.87868 2.87868C6.31607 3.44129 6 4.20435 6 5V7Z"
+                  fill="#090909"
+                />
+                <circle cx="17" cy="19" r="3" fill="#FF922C" />
+              </g>
+              <defs>
+                <clipPath id="clip0_5_28">
+                  <rect width="20" height="22" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </nav>
+
+        <div className="mt-[212px] flex justify-between">
+          <div className="max-w-[367px]">
+            <h2 className="text-yellow text-[44px]">$32</h2>
+            <h3 className="text-4xl  font-medium">
+              Green Goddess Chicken Salad
+            </h3>
+            <p className="mt-3">
+              It is a non vegetarian salad which consists of the green goddess
+              dressing mixed with chicken, peppers, olives and celery.
+            </p>
+            <button className="mt-7 bg-yellow text-white py-3 transition-all ease-in-out duration-300 px-10 rounded-full hover:scale[1.2]">
+              ORDER NOW
+            </button>
+          </div>
+          <div className="max-w-[568px] -mt-[150px]">
+            <div className="grid place-items-center relative -z-50 border-yellow border-dashed border-2 rounded-full w-full aspect-square">
+              <Image
+                alt="center image"
+                src="/images/01.png"
+                sizes="100vw"
+                width={0}
+                height={0}
+                className="w-full object-cover z-30"
+              />
+
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full">
+                  {/* <!-- Example of an image on the border, you can replicate this for multiple images --> */}
+                  <Image
+                    alt="border image"
+                    src="/images/01.png"
+                    sizes="100vw"
+                    width={150}
+                    height={150}
+                    className="absolute -top-[55px] left-1/2 transform -translate-x-1/2"
+                  />
+                  {/* <!-- Add more images here with appropriate positioning -->
+                <!-- For example, at 45 degrees --> */}
+                  <Image
+                    alt="border image"
+                    src="/images/02.png"
+                    sizes="100vw"
+                    width={150}
+                    height={150}
+                    className="absolute top-[12.5%] left-[80.5%] transform -translate-x-1/2 -translate-y-1/2"
+                  />
+                  <Image
+                    alt="border image"
+                    src="/images/03.png"
+                    sizes="100vw"
+                    width={150}
+                    height={150}
+                    className="absolute top-[12.5%] left-[47.5%] transform -translate-x-[245px] -translate-y-1/2"
+                  />
+                  <Image
+                    alt="border image"
+                    src="/images/04.png"
+                    sizes="100vw"
+                    width={150}
+                    height={150}
+                    className="absolute top-[35%] left-0 transform -translate-x-1/2 -translate-y-1/2"
+                  />
+                  <Image
+                    alt="border image"
+                    src="/images/05.png"
+                    sizes="100vw"
+                    width={150}
+                    height={150}
+                    className="absolute top-[35%] left-[95%] transform -translate-x-1/2 -translate-y-1/2"
+                  />
+                  {/* <!-- Add other images similarly --> */}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div>
+          <p className="text-sm mt-[142px] mb-7">Watch the Video</p>
+        </div>
       </div>
     </main>
   );
