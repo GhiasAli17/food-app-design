@@ -79,8 +79,9 @@ export default function Home() {
               ORDER NOW
             </button>
           </div>
-          <div className="max-w-[568px] -mt-[150px]">
-            <div className="grid place-items-center relative -z-50 border-yellow border-dashed border-2 rounded-full w-full aspect-square">
+          <div className="max-w-[560px] -mt-[150px] relative">
+            <div className="grid place-items-center relative -z-50 w-full aspect-square">
+              <div className="absolute inset-0 border-2 rounded-full border-yellow mask-circle"></div>
               <Image
                 alt="center image"
                 src="/images/01.png"
@@ -102,7 +103,7 @@ export default function Home() {
                     className="absolute -top-[55px] left-1/2 transform -translate-x-1/2"
                   />
                   {/* <!-- Add more images here with appropriate positioning -->
-                <!-- For example, at 45 degrees --> */}
+                  <!-- For example, at 45 degrees --> */}
                   <Image
                     alt="border image"
                     src="/images/02.png"

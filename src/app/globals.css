@@ -24,3 +24,8 @@ body {
 body {
   -ms-overflow-style: none;
 }
+
+.mask-circle {
+  mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
+}
